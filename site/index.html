@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Gerador de Boletos
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body>
+    bradesco
+
+
+    <form action="http://dev.local:8080/boleto/" method="GET">
+      <fieldset>
+        <legend>Banco</legend>
+        <label>Valor: <input name="valor" value="5.00"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Vencimento</legend>
+        <input name="vencimento-dia" size="2" value="12"> / 
+        <input name="vencimento-mes" size="2" value="12"> / 
+        <input name="vencimento-ano" size="4" value="2015"> 
+      </fieldset>
+      <fieldset>
+        <legend>Emissor</legend>
+        <label>Beneficiário: <input name="beneficiario" value="Associação Natureza em Forma"></label>
+        <label>CNPJ/CPF: <input name="beneficiario-documento" value="12.139.936/0001-87">
+        <label>Agência: <input name="agencia" value="3349"> - <input name="agencia-digito" value="9"></label>
+        <label>Conta Corrente: <input name="conta" value="5800"> - <input name="conta-digito" value="9"></label>
+        <label>Endereço: <input name="endereco" value="Pagável em qualquer agência bancária até o vencimento"></label>
+
+        <input type="hidden" name="carteira" value="25">
+        <label>Número de Controle: <input name="nosso-numero" value="1"></label>
+      </fieldset>
+      <fieldset> 
+        <legend>Pagador</legend>
+        <label>Nome: <input name="nome" value="jonas"></label>
+      </fieldset>
+
+      <input type="submit">
+    </form>
+
+  </body>
+</html>

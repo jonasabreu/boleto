@@ -1,0 +1,20 @@
+apply plugin: 'jetty'
+apply plugin: 'eclipse'
+
+repositories {
+	mavenCentral()
+    maven {
+        url 'http://jasperreports.sourceforge.net/maven2'
+    }
+}
+
+version = '1.0'
+
+sourceCompatibility = '1.5'
+
+dependencies {
+    compile 'br.com.caelum.stella:caelum-stella-boleto:2.1.2'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+}
+
+[jettyRun, jettyRunWar]*.contextPath = "boleto"
